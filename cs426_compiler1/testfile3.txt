@@ -1,0 +1,25 @@
+main(){
+int.x;
+x=3;
+int.y;
+y=x+3;
+if(x>y){
+int.y;
+x=4;	
+}
+bool.a;
+a=x&&y;
+bool.b;
+b=x&!y;
+bool.c;
+
+c=x||y;
+while(x<=y){
+string.s;
+}
+x+y;
+example_procedure(int.x int.y);
+example_procedure(int.x int.y){
+int.x;
+}
+}

@@ -1,0 +1,15 @@
+int.x;
+x=3;
+int.y;
+y=x+3;
+if(x>y){
+x=4;	
+}
+
+while(x<=y){
+}
+x+y;
+example_procedure(int.x int.y);
+example_procedure(int.x int.y){
+x=y;
+}

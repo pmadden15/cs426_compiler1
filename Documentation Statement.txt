@@ -1,0 +1,5 @@
+Documentation:
+C1C Brad Klanderman helped me understand the overall concept of this project.  
+	He told me that a lot of this was essentially "recursion" and that we were simply iterating through the program.
+C1C Gina Biagetti taught me how to prevent x<y<z, by saying exactly what Doctor Carlisle said in class:
+	"instead of doing A->A<B|B do A->B<B|B"

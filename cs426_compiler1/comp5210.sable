@@ -1,0 +1,153 @@
+Package comp5210;
+
+Helpers
+    digit = ['0' .. '9'] ;
+    ascii_char = [32 .. 127] ;
+    letter = [['a' .. 'z'] + ['A' .. 'Z']] ;
+	eol = 10|13 ; 
+	no_quote = 32|33|[35..127];
+	
+
+Tokens
+	shout = '!';
+	whitespace = (' '|9|10|13)+;
+	comment = '//' ascii_char*;
+
+	class = 'class';
+	public = 'public';
+	private = 'private';
+	return = 'return';
+	main_program = 'main';
+
+	//operators
+	l_parenthesis = '(';
+	r_parenthesis = ')';
+	l_sq_bracket = '[';
+	r_sq_bracket = ']';
+	l_cu_bracket = '{';
+	r_cu_bracket = '}';
+	exponent = '^';
+	seperator = '.';
+	addition = '+';
+	subtraction = '-';
+	multiplication = '*';
+	division = '/';
+	and_sign = '&&';
+	or_sign = '||';
+	not_sign = '&!';
+	equivalent = '==';
+	greater_or_equal = '>=';
+	lesser_or_equal = '<=';
+	greater = '>';
+	less = '<';
+	equal = '=';
+	semicolon = ';';
+	const_token = 'const';
+
+	//specify floating point numbers
+	//C1C Jake Werner showed me how to do floating point numbers
+	float = digit + '.' (digit + 'e' '-' ? digit + | digit +);
+
+	//integers
+	integer = digit+;
+
+	//strings
+	string ='"' (no_quote | '/"')* '"';
+
+	//Identify the If token
+	if = 'if';
+
+	//identify the else token
+	else = 'else';
+
+	//identify the while token
+	while = 'while';
+
+	id = (letter+ '_'?)+;
+
+	
+IgnoredTokens
+	whitespace, 
+	comment;
+	
+	
+//PEX2	
+Productions
+	program = main_program l_parenthesis r_parenthesis l_cu_bracket body r_cu_bracket;
+	body =	 {constant_side} constant body
+			|{if_side} if_statement body
+			|{while_side} while_statement body
+			|{expression_side} expression_main body
+			|{variable_side} variable_declaration body
+			|{procedure_call_side} procedure_call body
+			|{procedure_side} procedure_declaration body
+			|{assignment_side} assignment body
+			|{empty_body};
+	
+	body_lesser ={if_side} if_statement body_lesser
+				|{while_side} while_statement body_lesser
+				|{expression_side} expression_main body_lesser
+				|{procedure_call_side} procedure_call body_lesser
+				|{assignment_side} assignment body
+
+				|{empty_body};
+
+	constant = {constant_base} const_token [datatype]:id seperator [varname]:id equal expression semicolon;
+
+	//Var and array Decls 
+	variable_declaration = {var_base} [datatype]:id seperator [varname]:id semicolon
+						|  {array_declaration_base} [datatype]:id seperator [varname]:id l_sq_bracket r_sq_bracket semicolon;
+
+	//assignment statement
+	assignment =  {standard_assignment} [varname]:id equal expression semicolon
+				| {array_assignment}	[varname]:id l_sq_bracket [array_place]:expression r_sq_bracket equal [value]:expression semicolon ;
+
+
+
+	if_statement ={if_base} if l_parenthesis expression r_parenthesis l_cu_bracket body_lesser r_cu_bracket;
+
+	while_statement ={while_base} while l_parenthesis expression r_parenthesis l_cu_bracket body_lesser r_cu_bracket;
+
+	procedure_call =		[varname]:id l_parenthesis procedure_helper r_parenthesis semicolon;
+	procedure_declaration =	[varname]:id l_parenthesis procedure_helper r_parenthesis  l_cu_bracket body_lesser r_cu_bracket;
+	procedure_helper =		{procedure_helper_main} procedure_helper [datatype]:id seperator [varname]:expression | {procedure_helper_empty};
+
+
+
+	expression_main = expression semicolon;
+
+	//and, or, not boolean operators
+	expression  = {and_base} expression and_sign expression1 
+				| {or_base}  expression or_sign  expression1 
+				| {not_base} expression not_sign expression1
+				| {and_next} expression1;
+
+	//comparisons boolean operator
+	expression1 = {greater_than_base}			[left]:expression2 greater			[right]:expression2 
+				| {less_than_base}				[left]:expression2 less				[right]:expression2
+				| {less_than_or_equal_base}		[left]:expression2 lesser_or_equal	[right]:expression2
+				| {greater_than_or_equal_base}	[left]:expression2 greater_or_equal [right]:expression2
+				| {equivalent_base}				[left]:expression2 equivalent		[right]:expression2
+				| {comparison_next}				expression2;
+
+	//addition and subtraction
+	expression2 = {addition_base}		expression2 addition expression3 
+				| {subtraction_base}	expression2 subtraction expression3
+				| {arithmatic_next}		expression3;
+
+	//multiplication and division
+	expression3 = {multiplication_base} expression3 multiplication expression4
+				| {division_base}		expression3 division expression4
+				| {algebra_next}		expression4;
+
+	//exponentiation
+	expression4 = {exponent_base}	expression4 exponent expression5
+				| {exponenet_next}	expression5;
+
+	//parenthesis
+	expression5 = {parenthesis_base} l_parenthesis expression r_parenthesis 
+				| {array_base} id l_sq_bracket expression r_sq_bracket
+				| {recursive_expression_variable} id
+				| {recursive_expression_int} integer
+				| {recursive_expression_float} float
+				| {recursive_expression_string} string;

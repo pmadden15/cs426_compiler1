@@ -1,0 +1,308 @@
+this file will work, all others will not 
+
+- AProgram
+     |- main
+     |- (
+     |- )
+     |- {
+     |- AVariableSideBody
+     |  |- AVarBaseVariableDeclaration
+     |  |  |- int
+     |  |  |- .
+     |  |  |- x
+     |  |  `- ;
+     |  `- AAssignmentSideBody
+     |     |- AStandardAssignmentAssignment
+     |     |  |- x
+     |     |  |- =
+     |     |  |- AAndNextExpression
+     |     |  |  `- AComparisonNextExpression1
+     |     |  |     `- AArithmaticNextExpression2
+     |     |  |        `- AAlgebraNextExpression3
+     |     |  |           `- AExponenetNextExpression4
+     |     |  |              `- ARecursiveExpressionIntExpression5
+     |     |  |                 `- 3
+     |     |  `- ;
+     |     `- AVariableSideBody
+     |        |- AVarBaseVariableDeclaration
+     |        |  |- int
+     |        |  |- .
+     |        |  |- y
+     |        |  `- ;
+     |        `- AAssignmentSideBody
+     |           |- AStandardAssignmentAssignment
+     |           |  |- y
+     |           |  |- =
+     |           |  |- AAndNextExpression
+     |           |  |  `- AComparisonNextExpression1
+     |           |  |     `- AAdditionBaseExpression2
+     |           |  |        |- AArithmaticNextExpression2
+     |           |  |        |  `- AAlgebraNextExpression3
+     |           |  |        |     `- AExponenetNextExpression4
+     |           |  |        |        `- ARecursiveExpressionVariableExpression5
+     |           |  |        |           `- x
+     |           |  |        |- +
+     |           |  |        `- AAlgebraNextExpression3
+     |           |  |           `- AExponenetNextExpression4
+     |           |  |              `- ARecursiveExpressionIntExpression5
+     |           |  |                 `- 3
+     |           |  `- ;
+     |           `- AIfSideBody
+     |              |- AIfBaseIfStatement
+     |              |  |- if
+     |              |  |- (
+     |              |  |- AAndNextExpression
+     |              |  |  `- AGreaterThanBaseExpression1
+     |              |  |     |- AArithmaticNextExpression2
+     |              |  |     |  `- AAlgebraNextExpression3
+     |              |  |     |     `- AExponenetNextExpression4
+     |              |  |     |        `- ARecursiveExpressionVariableExpression5
+     |              |  |     |           `- x
+     |              |  |     |- >
+     |              |  |     `- AArithmaticNextExpression2
+     |              |  |        `- AAlgebraNextExpression3
+     |              |  |           `- AExponenetNextExpression4
+     |              |  |              `- ARecursiveExpressionVariableExpression5
+     |              |  |                 `- y
+     |              |  |- )
+     |              |  |- {
+     |              |  |- AAssignmentSideBodyLesser
+     |              |  |  `- AStandardAssignmentAssignment
+     |              |  |  |  |- x
+     |              |  |  |  |- =
+     |              |  |  |  |- AAndNextExpression
+     |              |  |  |  |  `- AComparisonNextExpression1
+     |              |  |  |  |     `- AArithmaticNextExpression2
+     |              |  |  |  |        `- AAlgebraNextExpression3
+     |              |  |  |  |           `- AExponenetNextExpression4
+     |              |  |  |  |              `- ARecursiveExpressionIntExpression5
+     |              |  |  |  |                 `- 4
+     |              |  |  |  `- ;
+     |              |  |  `- AEmptyBodyBody
+     |              |  `- }
+     |              `- AVariableSideBody
+     |                 |- AVarBaseVariableDeclaration
+     |                 |  |- bool
+     |                 |  |- .
+     |                 |  |- a
+     |                 |  `- ;
+     |                 `- AAssignmentSideBody
+     |                    |- AStandardAssignmentAssignment
+     |                    |  |- a
+     |                    |  |- =
+     |                    |  |- AAndBaseExpression
+     |                    |  |  |- AAndNextExpression
+     |                    |  |  |  `- AComparisonNextExpression1
+     |                    |  |  |     `- AArithmaticNextExpression2
+     |                    |  |  |        `- AAlgebraNextExpression3
+     |                    |  |  |           `- AExponenetNextExpression4
+     |                    |  |  |              `- ARecursiveExpressionVariableExpression5
+     |                    |  |  |                 `- x
+     |                    |  |  |- &&
+     |                    |  |  `- AComparisonNextExpression1
+     |                    |  |     `- AArithmaticNextExpression2
+     |                    |  |        `- AAlgebraNextExpression3
+     |                    |  |           `- AExponenetNextExpression4
+     |                    |  |              `- ARecursiveExpressionVariableExpression5
+     |                    |  |                 `- y
+     |                    |  `- ;
+     |                    `- AVariableSideBody
+     |                       |- AVarBaseVariableDeclaration
+     |                       |  |- bool
+     |                       |  |- .
+     |                       |  |- b
+     |                       |  `- ;
+     |                       `- AAssignmentSideBody
+     |                          |- AStandardAssignmentAssignment
+     |                          |  |- b
+     |                          |  |- =
+     |                          |  |- ANotBaseExpression
+     |                          |  |  |- AAndNextExpression
+     |                          |  |  |  `- AComparisonNextExpression1
+     |                          |  |  |     `- AArithmaticNextExpression2
+     |                          |  |  |        `- AAlgebraNextExpression3
+     |                          |  |  |           `- AExponenetNextExpression4
+     |                          |  |  |              `- ARecursiveExpressionVariableExpression5
+     |                          |  |  |                 `- x
+     |                          |  |  |- &!
+     |                          |  |  `- AComparisonNextExpression1
+     |                          |  |     `- AArithmaticNextExpression2
+     |                          |  |        `- AAlgebraNextExpression3
+     |                          |  |           `- AExponenetNextExpression4
+     |                          |  |              `- ARecursiveExpressionVariableExpression5
+     |                          |  |                 `- y
+     |                          |  `- ;
+     |                          `- AVariableSideBody
+     |                             |- AVarBaseVariableDeclaration
+     |                             |  |- bool
+     |                             |  |- .
+     |                             |  |- c
+     |                             |  `- ;
+     |                             `- AAssignmentSideBody
+     |                                |- AStandardAssignmentAssignment
+     |                                |  |- c
+     |                                |  |- =
+     |                                |  |- AOrBaseExpression
+     |                                |  |  |- AAndNextExpression
+     |                                |  |  |  `- AComparisonNextExpression1
+     |                                |  |  |     `- AArithmaticNextExpression2
+     |                                |  |  |        `- AAlgebraNextExpression3
+     |                                |  |  |           `- AExponenetNextExpression4
+     |                                |  |  |              `- ARecursiveExpressionVariableExpression5
+     |                                |  |  |                 `- x
+     |                                |  |  |- ||
+     |                                |  |  `- AComparisonNextExpression1
+     |                                |  |     `- AArithmaticNextExpression2
+     |                                |  |        `- AAlgebraNextExpression3
+     |                                |  |           `- AExponenetNextExpression4
+     |                                |  |              `- ARecursiveExpressionVariableExpression5
+     |                                |  |                 `- y
+     |                                |  `- ;
+     |                                `- AVariableSideBody
+     |                                   |- AVarBaseVariableDeclaration
+     |                                   |  |- string
+     |                                   |  |- .
+     |                                   |  |- s
+     |                                   |  `- ;
+     |                                   `- AAssignmentSideBody
+     |                                      |- AStandardAssignmentAssignment
+     |                                      |  |- s
+     |                                      |  |- =
+     |                                      |  |- AAndNextExpression
+     |                                      |  |  `- AComparisonNextExpression1
+     |                                      |  |     `- AArithmaticNextExpression2
+     |                                      |  |        `- AAlgebraNextExpression3
+     |                                      |  |           `- AExponenetNextExpression4
+     |                                      |  |              `- ARecursiveExpressionStringExpression5
+     |                                      |  |                 `- "Hi Doc"
+     |                                      |  `- ;
+     |                                      `- AWhileSideBody
+     |                                         |- AWhileBaseWhileStatement
+     |                                         |  |- while
+     |                                         |  |- (
+     |                                         |  |- AAndNextExpression
+     |                                         |  |  `- ALessThanOrEqualBaseExpression1
+     |                                         |  |     |- AArithmaticNextExpression2
+     |                                         |  |     |  `- AAlgebraNextExpression3
+     |                                         |  |     |     `- AExponenetNextExpression4
+     |                                         |  |     |        `- ARecursiveExpressionVariableExpression5
+     |                                         |  |     |           `- x
+     |                                         |  |     |- <=
+     |                                         |  |     `- AArithmaticNextExpression2
+     |                                         |  |        `- AAlgebraNextExpression3
+     |                                         |  |           `- AExponenetNextExpression4
+     |                                         |  |              `- ARecursiveExpressionVariableExpression5
+     |                                         |  |                 `- y
+     |                                         |  |- )
+     |                                         |  |- {
+     |                                         |  |- AAssignmentSideBodyLesser
+     |                                         |  |  `- AStandardAssignmentAssignment
+     |                                         |  |  |  |- x
+     |                                         |  |  |  |- =
+     |                                         |  |  |  |- AAndNextExpression
+     |                                         |  |  |  |  `- AComparisonNextExpression1
+     |                                         |  |  |  |     `- AAdditionBaseExpression2
+     |                                         |  |  |  |        |- AArithmaticNextExpression2
+     |                                         |  |  |  |        |  `- AAlgebraNextExpression3
+     |                                         |  |  |  |        |     `- AExponenetNextExpression4
+     |                                         |  |  |  |        |        `- ARecursiveExpressionVariableExpression5
+     |                                         |  |  |  |        |           `- x
+     |                                         |  |  |  |        |- +
+     |                                         |  |  |  |        `- AAlgebraNextExpression3
+     |                                         |  |  |  |           `- AExponenetNextExpression4
+     |                                         |  |  |  |              `- ARecursiveExpressionIntExpression5
+     |                                         |  |  |  |                 `- 1
+     |                                         |  |  |  `- ;
+     |                                         |  |  `- AEmptyBodyBody
+     |                                         |  `- }
+     |                                         `- AExpressionSideBody
+     |                                            |- AExpressionMain
+     |                                            |  |- AAndNextExpression
+     |                                            |  |  `- AComparisonNextExpression1
+     |                                            |  |     `- AAdditionBaseExpression2
+     |                                            |  |        |- AArithmaticNextExpression2
+     |                                            |  |        |  `- AAlgebraNextExpression3
+     |                                            |  |        |     `- AExponenetNextExpression4
+     |                                            |  |        |        `- ARecursiveExpressionVariableExpression5
+     |                                            |  |        |           `- x
+     |                                            |  |        |- +
+     |                                            |  |        `- AAlgebraNextExpression3
+     |                                            |  |           `- AExponenetNextExpression4
+     |                                            |  |              `- ARecursiveExpressionVariableExpression5
+     |                                            |  |                 `- y
+     |                                            |  `- ;
+     |                                            `- AProcedureCallSideBody
+     |                                               |- AProcedureCall
+     |                                               |  |- example_procedure
+     |                                               |  `- (
+     |                                               |  |- AProcedureHelperMainProcedureHelper
+     |                                               |  |  |- AProcedureHelperMainProcedureHelper
+     |                                               |  |  |  |- AProcedureHelperEmptyProcedureHelper
+     |                                               |  |  |  |- int
+     |                                               |  |  |  |- .
+     |                                               |  |  |  `- AAndNextExpression
+     |                                               |  |  |     `- AComparisonNextExpression1
+     |                                               |  |  |        `- AArithmaticNextExpression2
+     |                                               |  |  |           `- AAlgebraNextExpression3
+     |                                               |  |  |              `- AExponenetNextExpression4
+     |                                               |  |  |                 `- ARecursiveExpressionVariableExpression5
+     |                                               |  |  |                    `- x
+     |                                               |  |  |- int
+     |                                               |  |  |- .
+     |                                               |  |  `- AAndNextExpression
+     |                                               |  |     `- AComparisonNextExpression1
+     |                                               |  |        `- AArithmaticNextExpression2
+     |                                               |  |           `- AAlgebraNextExpression3
+     |                                               |  |              `- AExponenetNextExpression4
+     |                                               |  |                 `- ARecursiveExpressionVariableExpression5
+     |                                               |  |                    `- y
+     |                                               |  |- )
+     |                                               |  `- ;
+     |                                               `- AProcedureSideBody
+     |                                                  `- AProcedureDeclaration
+     |                                                  |  |- example_procedure
+     |                                                  |  `- (
+     |                                                  |  |- AProcedureHelperMainProcedureHelper
+     |                                                  |  |  |- AProcedureHelperMainProcedureHelper
+     |                                                  |  |  |  |- AProcedureHelperEmptyProcedureHelper
+     |                                                  |  |  |  |- int
+     |                                                  |  |  |  |- .
+     |                                                  |  |  |  `- AAndNextExpression
+     |                                                  |  |  |     `- AComparisonNextExpression1
+     |                                                  |  |  |        `- AArithmaticNextExpression2
+     |                                                  |  |  |           `- AAlgebraNextExpression3
+     |                                                  |  |  |              `- AExponenetNextExpression4
+     |                                                  |  |  |                 `- ARecursiveExpressionVariableExpression5
+     |                                                  |  |  |                    `- x
+     |                                                  |  |  |- int
+     |                                                  |  |  |- .
+     |                                                  |  |  `- AAndNextExpression
+     |                                                  |  |     `- AComparisonNextExpression1
+     |                                                  |  |        `- AArithmaticNextExpression2
+     |                                                  |  |           `- AAlgebraNextExpression3
+     |                                                  |  |              `- AExponenetNextExpression4
+     |                                                  |  |                 `- ARecursiveExpressionVariableExpression5
+     |                                                  |  |                    `- y
+     |                                                  |  |- )
+     |                                                  |  |- {
+     |                                                  |  |- AAssignmentSideBodyLesser
+     |                                                  |  |  `- AStandardAssignmentAssignment
+     |                                                  |  |  |  |- x
+     |                                                  |  |  |  |- =
+     |                                                  |  |  |  |- AAndNextExpression
+     |                                                  |  |  |  |  `- AComparisonNextExpression1
+     |                                                  |  |  |  |     `- AArithmaticNextExpression2
+     |                                                  |  |  |  |        `- AAlgebraNextExpression3
+     |                                                  |  |  |  |           `- AExponenetNextExpression4
+     |                                                  |  |  |  |              `- ARecursiveExpressionVariableExpression5
+     |                                                  |  |  |  |                 `- y
+     |                                                  |  |  |  `- ;
+     |                                                  |  |  `- AEmptyBodyBody
+     |                                                  |  `- }
+     |                                                  `- AEmptyBodyBody
+     `- }
+
+I tried to compare x, y, and z, it will crash on line 2 
+I removed main, it will crash on line 1 
+I tried to declare variables inside ifs, whiles, and procedure calls.  It will crash on line 7 
+I removed a semicolon on line 2, it will crash on line 2 
